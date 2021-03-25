@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
 	int fd = -1, ret;
 	char *tmp1,  tmp2[10], ch = 't';
-	char devname_head[50] = "/sys/bus/w1/devices/28-000008832b6c";
+	char devname_head[50] = "/sys/bus/w1/devices/28-000007237df2";
 
 	
 	char devname_end[10] = "/w1_slave";
@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 		//printf("%lf\n", temp);
 		//printf("%lf\n", prag);
 		lcdPosition(lcd, 0, 0);
-		lcdPrintf(lcd, "%lf", temp);
+		lcdPrintf(lcd, "%.2lf", temp);
 		delay(2000);
 		lcdClear(lcd);
 	
